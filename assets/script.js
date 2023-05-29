@@ -49,7 +49,6 @@ function getWeatherApi () {
                 document.getElementById("day-"+ dayElIndex + "-wind").textContent = "Wind: " + data.list[i].wind.speed + " MPH"
                 document.getElementById("day-"+ dayElIndex + "-wind").textContent = "Wind: " + data.list[i].wind.speed + " MPH"
                 document.getElementById("day-"+ dayElIndex + "-humid").textContent = "Humidity: " + data.list[i].main.humidity + "%"
-
                 dayElIndex++;
             }
           })
