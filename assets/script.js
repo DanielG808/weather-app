@@ -24,6 +24,7 @@ function getWeatherApi () {
     .then(function (data) {
         console.log(data)
         document.getElementById("city-name").textContent = data.name + " (" + today + ") ";
+        document.getElementById["city-icon"].src = data.weather[0].icon
         document.getElementById("city-temp").textContent = "Temp: " + data.main.temp + " F\xB0";
         document.getElementById("city-wind").textContent = "Wind: " + data.wind.speed + " MPH";
         document.getElementById("city-humid").textContent = "Humid: " + data.main.humidity + "%";
@@ -45,10 +46,10 @@ function getWeatherApi () {
             // i+=8 is the final parameter for our loop because 8 x 3 gives us our full 24 hour day
             for (i = 5; i < 39; i+=8) {
                 document.getElementById("day-"+ dayElIndex + "-date").textContent = data.list[i].dt_txt.slice(0, 10);
-                document.getElementById("day-"+ dayElIndex + "-temp").textContent = "Temp: " + data.list[i].main.temp + " F\xB0"
-                document.getElementById("day-"+ dayElIndex + "-wind").textContent = "Wind: " + data.list[i].wind.speed + " MPH"
-                document.getElementById("day-"+ dayElIndex + "-wind").textContent = "Wind: " + data.list[i].wind.speed + " MPH"
-                document.getElementById("day-"+ dayElIndex + "-humid").textContent = "Humidity: " + data.list[i].main.humidity + "%"
+                document.getElementById("day-"+ dayElIndex + "-temp").textContent = "Temp: " + data.list[i].main.temp + " F\xB0";
+                document.getElementById("day-"+ dayElIndex + "-wind").textContent = "Wind: " + data.list[i].wind.speed + " MPH";
+                document.getElementById("day-"+ dayElIndex + "-wind").textContent = "Wind: " + data.list[i].wind.speed + " MPH";
+                document.getElementById("day-"+ dayElIndex + "-humid").textContent = "Humidity: " + data.list[i].main.humidity + "%";
                 dayElIndex++;
             }
           })
