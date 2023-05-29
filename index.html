@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+      <!-- Link the DayJS library -->
+      <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
@@ -30,53 +37,54 @@
         </div>
         <div class="weather-info-container col-md-8">
             <div class="current-weather border p-3">
-                <h2>City Name, Date, Weather Icon</h2>
-                <p>Temp:</p>
-                <p>Wind:</p>
-                <p>Humidity:</p>
+                <h2 id="city-name">City Name</h2>
+                <p id="city-temp">Temp:</p>
+                <p id="city-wind">Wind:</p>
+                <p id="city-humid">Humidity:</p>
             </div>
             <div class="5-day-forecast ">
                 <h3 class="pt-3">5-Day Forecast:</h3>
                 <div class="card-container d-flex row justify-content-center m-3 p-3">
                     <article class="card col-sm m-2 p-3 w-25 bg-dark text-white" id="day-1">
-                        <p class="date">Date</p>
-                        <p class="icon">Weather Icon</p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humid">Humidity: </p>
+                        <p class="date" id="day-1-date">Date</p>
+                        <p class="icon" id="day-1-icon">Weather Icon</p>
+                        <p class="temp" id="day-1-temp">Temp: </p>
+                        <p class="wind" id="day-1-wind">Wind: </p>
+                        <p class="humid" id="day-1-humid">Humidity: </p>
                     </article>
                     <article class="card col-sm m-2 p-3 w-25 bg-dark text-white" id="day-2">
-                        <p class="date">Date</p>
-                        <p class="icon">Weather Icon</p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humid">Humidity: </p>
+                        <p class="date" id="day-2-date">Date</p>
+                        <p class="icon" id="day-2-icon">Weather Icon</p>
+                        <p class="temp" id="day-2-temp">Temp: </p>
+                        <p class="wind" id="day-2-wind">Wind: </p>
+                        <p class="humid" id="day-2-humid">Humidity: </p>
                     </article>
                     <article class="card col-sm m-2 p-3 w-25 bg-dark text-white" id="day-3">
-                        <p class="date">Date</p>
-                        <p class="icon">Weather Icon</p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humid">Humidity: </p>
+                        <p class="date" id="day-3-date">Date</p>
+                        <p class="icon" id="day-3-icon">Weather Icon</p>
+                        <p class="temp" id="day-3-temp">Temp: </p>
+                        <p class="wind" id="day-3-wind">Wind: </p>
+                        <p class="humid" id="day-3-humid">Humidity: </p>
                     </article>
                     <article class="card col-sm m-2 p-3 w-25 bg-dark text-white" id="day-4">
-                        <p class="date">Date</p>
-                        <p class="icon">Weather Icon</p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humid">Humidity: </p>
+                        <p class="date" id="day-4-date">Date</p>
+                        <p class="icon" id="day-4-icon">Weather Icon</p>
+                        <p class="temp" id="day-4-temp">Temp: </p>
+                        <p class="wind" id="day-4-wind">Wind: </p>
+                        <p class="humid" id="day-4-humid">Humidity: </p>
                     </article>
                     <article class="card col-sm m-2 p-3 w-25 bg-dark text-white" id="day-5">
-                        <p class="date">Date</p>
-                        <p class="icon">Weather Icon</p>
-                        <p class="temp">Temp: </p>
-                        <p class="wind">Wind: </p>
-                        <p class="humid">Humidity: </p>
+                        <p class="date" id="day-5-date">Date</p>
+                        <p class="icon" id="day-5-icon">Weather Icon</p>
+                        <p class="temp" id="day-5-temp">Temp: </p>
+                        <p class="wind" id="day-5-wind">Wind: </p>
+                        <p class="humid" id="day-5-humid">Humidity: </p>
                     </article>
                 </div>
             </div>
         </div>
     </main>
 </body>
+<script src="./assets/apikey.js"></script>
 <script src="./assets/script.js"></script>
 </html>
