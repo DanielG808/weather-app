@@ -24,7 +24,7 @@ function getWeatherApi () {
     .then(function (data) {
         console.log(data)
         document.getElementById("city-name").textContent = data.name + " (" + today + ") ";
-        document.getElementById["city-icon"].src = data.weather[0].icon
+        document.getElementById["city-icon"].src = ``https://openweathermap.org/img/w/${data.weather[0].icon}.png``
         document.getElementById("city-temp").textContent = "Temp: " + data.main.temp + " F\xB0";
         document.getElementById("city-wind").textContent = "Wind: " + data.wind.speed + " MPH";
         document.getElementById("city-humid").textContent = "Humid: " + data.main.humidity + "%";
