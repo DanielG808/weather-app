@@ -61,16 +61,18 @@ function createButton() {
   var city = document.querySelector("#city-srch").value;
   console.log(city);
   
-
   localStorage.setItem(city, city);
   for (i = 0; i < localStorage.length; i++) {
     var prevSearchBtn = document.createElement("button");
     prevSearchBtn.textContent = localStorage.getItem(localStorage.key(i));
     // console.log(prevSearchBtn);
     document.getElementById("prev-search").appendChild(prevSearchBtn);
+    prevSearchBtn.addEventListener("click", function (event) {
+      console.log("prev search clicked");
+      srchInputEl.value = this.textContent;
+      getWeatherApi();
+    })
   }
-
-  
 }
 
 // USER INTERACTIONS
